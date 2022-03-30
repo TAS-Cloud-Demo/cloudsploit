@@ -3,6 +3,8 @@
 #
 # supported frameworks: mocha|jest|jasmine
 framework: mocha
+blocklist:
+  - './engine.spec.js##engine'
 
 preRun:
   # set of commands to run before running the tests
