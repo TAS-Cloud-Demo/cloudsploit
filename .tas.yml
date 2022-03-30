@@ -4,7 +4,7 @@
 # supported frameworks: mocha|jest|jasmine
 framework: mocha
 blocklist:
-  - './engine.spec.js##engine##should run with no arguments'
+  - './plugins/aws/cloudformation/driftDetection.spec.js##driftDetection##should FAIL if CloudFormation stack is in drifted state'
 
 preRun:
   # set of commands to run before running the tests
@@ -23,4 +23,3 @@ postMerge:
 postRun:
      command:
         - node --version
-parallelism: 10
