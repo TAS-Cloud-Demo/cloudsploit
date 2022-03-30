@@ -328,7 +328,7 @@ For example:
 # Suppress all results for the acmValidation plugin
 $ ./index.js --suppress acmValidation:*:*
 
-# Suppress all us-east-1 region results
+# Suppress all us-east- 1 region results
 $ ./index.js --suppress *:us-east-1:*
 
 # Suppress all results matching the regex "certificate/*" in all regions for all plugins
