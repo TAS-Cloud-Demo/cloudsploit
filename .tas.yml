@@ -4,7 +4,7 @@
 # supported frameworks: mocha|jest|jasmine
 framework: mocha
 blocklist:
-  - './plugins/aws/cloudformation/driftDetection.spec.js##driftDetection##should FAIL if CloudFormation stack is in drifted state'
+  - './plugins/aws/cloudformation/driftDetection.spec.js##driftDetection##run##should FAIL if CloudFormation stack is in drifted state'
 
 preRun:
   # set of commands to run before running the tests
