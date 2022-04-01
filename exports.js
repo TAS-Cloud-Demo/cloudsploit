@@ -1,4 +1,4 @@
-// Export all available scan
+// Export all available scans
 
 module.exports = {
     aws : {
