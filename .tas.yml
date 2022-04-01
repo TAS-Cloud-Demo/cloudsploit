@@ -1,25 +1,24 @@
 ---
 # THIS IS A SAMPLE ".tas.yml" CONFIGURATION FILE
-#
-# supported frameworks: mocha|jest|jasmine
-framework: mocha
+# FIRSTLY - You need to specify which testing framework you are using. Currently supported JS frameworks are : mocha, jest and jasmine.
+framework: mocha # mocha # framework should be as per your project
 blocklist:
   - './plugins/aws/cloudformation/driftDetection.spec.js##driftDetection##run##should FAIL if CloudFormation stack is in drifted state'
-
 preRun:
-  # set of commands to run before running the tests
-  # for eg `yarn install`, `yarn build`
+  # SECONDLY - You need to set the preRun commands. These are shell commands executed inside the root level of your git repository before running the tests. preRun commands are executed using non-login shells by default, so you must explicitly source any dotfiles as part of the command.
   command:
-    # change the command according to the package manager used.
-    # For eg, npm ci, yarn install
     - npm install
 
 postMerge:
-  # glob-pattern for identifying the test files
+  # THIRDLY - You need to set postMerge patterns.
+  # These would be the glob patterns for the test cases that you want to execute in the post-merge jobs. A postMerge test execution job is initiated whenever a PR is merged into a branch.
   pattern:
     # glob-patterns to discover tests to run in case of postMerge
-    - ./**/*.spec.js
-    # - "./unit_test_folder_B/**/*.ts"
-postRun:
-     command:
-        - node --version
+    - "./**/*.spec.js"
+    
+preMerge:
+  # THIRDLY - You need to set postMerge patterns.
+  # These would be the glob patterns for the test cases that you want to execute in the post-merge jobs. A postMerge test execution job is initiated whenever a PR is merged into a branch.
+  pattern:
+    # glob-patterns to discover tests to run in case of postMerge
+    - "./**/*.spec.js"
