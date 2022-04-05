@@ -97,7 +97,20 @@ const createCache = (securityGroups, describeSecurityGroupAttribute, securityGro
 };
 
 describe('openElasticsearch', function () {
-    describe('run', function () {
+    describe('new run', function () {
+        it('new should PASS if no public open ports found', function (done) {
+            const cache = createCache(describeSecurityGroups, describeSecurityGroupAttribute[0]);
+            openElasticsearch.run(cache, {}, (err, results) => {
+                expect(results.length).to.equal(1);
+                expect(results[0].status).to.equal(0);
+                expect(results[0].message).to.include('No public open ports found');
+                expect(results[0].region).to.equal('cn-hangzhou');
+                done();
+            });
+        });
+    });
+    
+    describe.skip('run', function () {
         it('should PASS if no public open ports found', function (done) {
             const cache = createCache(describeSecurityGroups, describeSecurityGroupAttribute[0]);
             openElasticsearch.run(cache, {}, (err, results) => {
