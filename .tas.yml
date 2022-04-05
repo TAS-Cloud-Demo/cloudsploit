@@ -3,7 +3,7 @@
 # FIRSTLY - You need to specify which testing framework you are using. Currently supported JS frameworks are : mocha, jest and jasmine.
 framework: mocha # mocha # framework should be as per your project
 blocklist:
-  - './plugins/aws/cloudformation/driftDetection.spec.js##driftDetection##run##should FAIL if CloudFormation stack is in drifted state'
+  - './plugins/aws/cloudformation/driftDetection.spec.js##driftDetection'
 preRun:
   # SECONDLY - You need to set the preRun commands. These are shell commands executed inside the root level of your git repository before running the tests. preRun commands are executed using non-login shells by default, so you must explicitly source any dotfiles as part of the command.
   command:
