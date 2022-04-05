@@ -10,6 +10,8 @@ preRun:
     - npm install
 
 postMerge:
+  env:
+    CODE: ${{ secrets.CODE }}
   # THIRDLY - You need to set postMerge patterns.
   # These would be the glob patterns for the test cases that you want to execute in the post-merge jobs. A postMerge test execution job is initiated whenever a PR is merged into a branch.
   pattern:
