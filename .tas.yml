@@ -1,7 +1,7 @@
 ---
 # THIS IS A SAMPLE ".tas.yml" CONFIGURATION FILE
 # FIRSTLY - You need to specify which testing framework you are using. Currently supported JS frameworks are : mocha, jest and jasmine.
-framework: mocha # mocha # framework should be as per your project
+# framework: mocha # mocha # framework should be as per your project
 blocklist:
   - './plugins/aws/cloudformation/driftDetection.spec.js##driftDetection##run##should FAIL if CloudFormation stack is in drifted state'
 preRun:
@@ -22,4 +22,4 @@ preMerge:
   pattern:
     # glob-patterns to discover tests to run in case of postMerge
     - "./**/*.spec.js"
-version= 1.0.0
+version: 1.0.0
