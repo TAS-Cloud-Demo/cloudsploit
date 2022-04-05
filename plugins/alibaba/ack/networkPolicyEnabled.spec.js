@@ -195,6 +195,7 @@ describe('networkPolicyEnabled', function () {
                 expect(results[0].message).to.include('Unable to query ACK clusters');
                 expect(results[0].region).to.equal(process.env.CODE);
                 done();
+		
             });
         });
     })
