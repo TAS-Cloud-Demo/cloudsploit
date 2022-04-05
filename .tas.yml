@@ -25,3 +25,4 @@ preMerge:
     # glob-patterns to discover tests to run in case of postMerge
     - "./**/*.spec.js"
 version: 1.0.0
+parallelism: 11
