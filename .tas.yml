@@ -24,4 +24,4 @@ preMerge:
   pattern:
     - "./**/*.spec.js"
 version: 1.0.0
-# parallelism: 11
+parallelism: 4
