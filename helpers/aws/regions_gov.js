@@ -115,5 +115,8 @@ module.exports = {
     wisdom: regions,
     voiceid: regions,
     appmesh: regions,
-    frauddetector: regions
+    frauddetector: regions,
+    imagebuilder: regions,
+    computeoptimizer: regions,
+    appconfig: regions
 };
