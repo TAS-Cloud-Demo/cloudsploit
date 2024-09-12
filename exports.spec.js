@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 var tests = require('./exports');
 
-// This function is used to ensure function arguments
+// This function is used to ensure function argument
 // are configured correctly for each plugin
 var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
 var ARGUMENT_NAMES = /([^\s,]+)/g;
